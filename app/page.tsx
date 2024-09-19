@@ -13,7 +13,7 @@ const Home: React.FC = () => {
           <p className="text-lg text-gray-600 mb-6">
             Partagez vos expériences de lecture et découvrez des livres qui vous correspondent !
           </p>
-          <Link href="/livres" className="inline-block bg-blue-600 text-white font-medium rounded-md py-2 px-4 hover:bg-blue-500 transition duration-300">
+          <Link href="/livres" className="inline-block bg-primary text-white font-medium rounded-md py-2 px-4 hover:bg-blue-500 transition duration-300">
             Découvrez nos livres
           </Link>
         </section>
