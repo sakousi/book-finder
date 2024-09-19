@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  --primary: #3E517A;
+  --secondary: #D0DCD4;
+  --light: #E6FAFC;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -27,5 +30,5 @@ body {
 }
 
 .container {
-  @apply mx-auto max-w-2xl p-4;
+  @apply mx-auto p-4;
 }
