@@ -32,11 +32,11 @@ const NavBar: React.FC = () => {
                     <Link href="/livres" className="text-gray-600 hover:text-blue-500 transition duration-300">
                         Livres
                     </Link>
-                    <Link href="/connexion"
+                    <Link href="/login"
                           className="bg-primary text-white font-medium rounded-md py-2 px-4 hover:scale-105 transition duration-300">
                         Connexion
                     </Link>
-                    <Link href="/inscription"
+                    <Link href="/register"
                           className="bg-transparent text-primary border-2 border-primary rounded-md py-2 px-4 hover:bg-primary hover:scale-105 hover:text-white transition duration-300">
                         Inscription
                     </Link>
@@ -62,9 +62,9 @@ const NavBar: React.FC = () => {
                     <Link href="/livres" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Livres</Link>
                     <hr className="my-2 border-gray-200"/>
                     <div className="flex flex-col gap-2 items-center pb-2">
-                        <Link href="/connexion"
+                        <Link href="/login"
                               className="block w-fit bg-primary text-white font-medium rounded-md py-2 px-4 hover:scale-105 transition duration-300">Connexion</Link>
-                        <Link href="/inscription"
+                        <Link href="/register"
                               className="block w-fit bg-transparent text-primary border-2 border-primary rounded-md py-2 px-4 hover:bg-primary hover:scale-105 hover:text-white transition duration-300">Inscription</Link>
                     </div>
                 </div>
