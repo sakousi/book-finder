@@ -51,7 +51,7 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
             Ce que nos utilisateurs disent
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md mb-4 max-w-md text-center">
               <p className="text-gray-600 mb-4">"BookFinder a complètement transformé ma manière de découvrir des livres. Je ne pourrais plus m'en passer!"</p>
               <p className="font-semibold">- Alice L.</p>
@@ -66,6 +66,36 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Partners Section */}
+        <section className="py-16">
+          <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
+            Nos Partenaires
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 text-center m-4 max-w-xs">
+              <img src="https://s.gr-assets.com/assets/home/header_logo-8d96d7078a3d63f9f31d92282fd67cf4.png" alt="Goodreads" className="mx-auto h-24 mb-4" />
+              <a href="https://www.goodreads.com/" className="text-md font-semibold text-gray-800 cursor-pointer hover:text-blue-600 transition duration-300">Goodreads</a>
+              <p>Goodreads permet aux utilisateurs d’évaluer et de recommander des livres, enrichissant ainsi les recommandations sur votre site.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 text-center m-4 max-w-xs">
+              <img src="https://www.mollat.com/Content/Img/Layout/logo-mobile.png" alt="Librairie Mollat" className="mx-auto h-24 mb-4" />
+              <a href="https://www.mollat.com/" className="text-md font-semibold text-gray-800 cursor-pointer hover:text-blue-600 transition duration-300">Librairie Mollat</a>
+              <p>Librairie Mollat, grande librairie indépendante française, offre un vaste choix de livres et des promotions exclusives pour vos lecteurs.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 text-center m-4 max-w-xs">
+              <img src="https://logo-marque.com/wp-content/uploads/2021/03/Fnac-Logo.png" alt="Fnac" className="mx-auto h-24 mb-4" />
+              <a href="https://www.fnac.com/" className="text-md font-semibold text-gray-800 cursor-pointer hover:text-blue-600 transition duration-300">Fnac</a>
+              <p>Fnac, leader de la distribution culturelle en France, permet d’intégrer l’achat en ligne, avec des offres spéciales pour les livres recommandés.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300 text-center m-4 max-w-xs">
+              <img src="https://i.pinimg.com/originals/a2/5b/97/a25b97c3e386d8c4b5a46853f4fd6d95.jpg" alt="Bookstagram" className="mx-auto h-24 mb-4" />
+              <a href="https://www.instagram.com/explore/tags/bookstagram/" className="text-md font-semibold text-gray-800 cursor-pointer hover:text-blue-600 transition duration-300">Bookstagram</a>
+              <p>Bookstagram réunit passionnés de livres sur Instagram, partageant critiques et recommandations via des photos engageantes et esthétiques.</p>
+            </div>
+          </div>
+        </section>
+
 
         {/* Blog Articles Section */}
         <section className="py-16">
