@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
     };
 
     return (
-        <nav className="bg-light">
+        <nav className="bg-white">
             <div className="container flex items-center justify-between p-5">
                 <Link href="/" className="text-gray-800 text-2xl font-bold hover:text-blue-600 transition duration-300">
                     BookFinder
@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
                     <Link href="/ma-liste" className="text-gray-600 hover:text-blue-500 transition duration-300">
                         Ma Liste
                     </Link>
-                    <Link href="/livres" className="text-gray-600 hover:text-blue-500 transition duration-300">
+                    <Link href="/books" className="text-gray-600 hover:text-blue-500 transition duration-300">
                         Livres
                     </Link>
                     <Link href="/connexion"
@@ -53,20 +53,20 @@ const NavBar: React.FC = () => {
             </div>
             {/* Dropdown Menu for Mobile */}
             {isOpen && (
-                <div className="md:hidden bg-white shadow-md">
+                <div 
+                  className={`md:hidden bg-white shadow-md transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+                  style={{ transitionProperty: 'max-height, opacity' }}
+                >
                     <Link href="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Accueil</Link>
                     <Link href="/recommendations"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Recommandations</Link>
                     <Link href="/profil" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Profil</Link>
                     <Link href="/ma-liste" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Ma Liste</Link>
-                    <Link href="/livres" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Livres</Link>
+                    <Link href="/books" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Livres</Link>
                     <hr className="my-2 border-gray-200"/>
-                    <div className="flex flex-col gap-2 items-center pb-2">
-                        <Link href="/connexion"
-                              className="block w-fit bg-primary text-white font-medium rounded-md py-2 px-4 hover:scale-105 transition duration-300">Connexion</Link>
-                        <Link href="/inscription"
-                              className="block w-fit bg-transparent text-primary border-2 border-primary rounded-md py-2 px-4 hover:bg-primary hover:scale-105 hover:text-white transition duration-300">Inscription</Link>
-                    </div>
+                    <Link href="/connexion" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Connexion</Link>
+                    <Link href="/inscription" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">Inscription</Link>
+   
                 </div>
             )}
         </nav>

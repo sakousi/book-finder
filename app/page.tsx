@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import books from "./data/books";
 
 const Home: React.FC = () => {
   return (
@@ -23,32 +24,34 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
             Recommandations de livres
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Example Book Cards */}
-            <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300">
-              <h3 className="font-bold text-xl mb-2">Le Petit Prince</h3>
-              <p className="text-gray-600 mb-4">Un conte poétique et philosophique qui explore les thèmes de l'amour et de l'amitié.</p>
-              <Link href="/livres/le-petit-prince" className="text-blue-600 hover:underline">En savoir plus</Link>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300">
-              <h3 className="font-bold text-xl mb-2">1984</h3>
-              <p className="text-gray-600 mb-4">Un roman dystopique qui décrit un futur totalitaire où la liberté d'expression est supprimée.</p>
-              <Link href="/livres/1984" className="text-blue-600 hover:underline">En savoir plus</Link>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-300">
-              <h3 className="font-bold text-xl mb-2">L'Étranger</h3>
-              <p className="text-gray-600 mb-4">Un roman qui explore l'absurdité de la condition humaine à travers les yeux d'un homme apathique.</p>
-              <Link href="/livres/l-etranger" className="text-blue-600 hover:underline">En savoir plus</Link>
-            </div>
+          {/* Books List */}
+          <div className="container mx-auto my-12 grid center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {books.slice(0,3).map((book) => (
+                <div key={book.id} className="bg-white p-6 shadow-lg rounded-lg transform transition-transform hover:scale-105">
+                  <img
+                    src={book.imageUrl}
+                    alt={book.title}
+                    className="w-full h-64 object-cover rounded-md mb-4"
+                  />
+                  <Link href={`/book/${book.id}`} passHref>
+                    <h2 className="text-xl font-semibold text-gray-800 cursor-pointer hover:text-blue-600 transition duration-300">
+                      {book.title}
+                    </h2>
+                  </Link>
+                  <p className="text-gray-600 mt-2"><strong>Auteur :</strong> {book.author}</p>
+                  <p className="text-gray-600"><strong>Genre :</strong> {book.genre}</p>
+                  <p className="text-gray-500 mt-4">{book.description.slice(0, 100)}...</p>
+                </div>
+              ))}
           </div>
         </section>
 
         {/* User Testimonials Section */}
-        <section className="py-16 bg-gray-200">
+        <section className="py-16 px-8 bg-gray-200">
           <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
             Ce que nos utilisateurs disent
           </h2>
-          <div className="flex flex-col items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md mb-4 max-w-md text-center">
               <p className="text-gray-600 mb-4">"BookFinder a complètement transformé ma manière de découvrir des livres. Je ne pourrais plus m'en passer!"</p>
               <p className="font-semibold">- Alice L.</p>
